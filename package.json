@@ -10,7 +10,8 @@
     "seedBooks": "node ./src/seeds/books.seed.js",
     "seedAuthors": "node ./src/seeds/authors.seed.js",
     "seedCollections": "node ./src/seeds/collections.seed.js",
-    "seedUniverse": "node ./src/seeds/universe.seeds.js"
+    "seedUniverse": "node ./src/seeds/universe.seeds.js",
+    "image": "node src/api/images/uploads.js"
   },
   "keywords": [],
   "author": "",

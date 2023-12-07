@@ -9,7 +9,9 @@ const booksSchema = new Schema(
         collection:{type:String},
         collection_index: {type:Number},
         universe: {type: String},
-        author: {type:String, require:true}
+        author: {type:String, require:true},
+        picture: {type: String}
+
     },{
         timestamps:true
     }

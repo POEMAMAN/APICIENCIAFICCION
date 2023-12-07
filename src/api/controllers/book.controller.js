@@ -56,7 +56,6 @@ const putBook = async (req, res) => {
   }
 };
 
-const HTTPSTATUSCODE = require("../../../utils/httpStatusCode");
 const fs = require("fs");
 
 const imageToUri = require("image-to-uri");
@@ -76,7 +75,7 @@ const createCoverBook = async (req, res, next) => {
     await fs.unlinkSync(musicCover);
     return res.json({
       status: 201,
-      message: HTTPSTATUSCODE[201],
+      message: 201,
       data: { book: bookDb.name },
     });
   } catch (error) {

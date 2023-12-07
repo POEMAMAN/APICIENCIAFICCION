@@ -1,13 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCI FI Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- <img id="scifi" src="https://res.cloudinary.com/dmbeu9ipe/image/upload/v1701924851/wsmdeyrsqazhxuohuxuc.png" alt="scifi-logo"> -->
+    </header>
+    <div class="container">
+        <h1 class="container-form-title">¡Make a great library SYFI!</h1>
+        <div class="container-form">
+        <form id="bookForm" action="action" method="POST" enctype="multipart/form-data">
+            <input type="text" id="name" class="name" placeholder="Título" required>
+            <input type="number" id="publication" class="publication" placeholder="publication year">
+            <input type="number" id="pages" class="pages" placeholder="pages number">
+            <input type="text" id="series" name="series" placeholder="collection">
+            <input type="file" id="picture" class="picture" placeholder="Please, only files .JPG, .JPEG y .PNG">
+            <button type="submit">Add book</button>
+        </form>
+        <form id="authorForm" action="action" method="POST" enctype="multipart/form-data">
+            <input type="text" id="name" class="name" placeholder="Title" required>
+            <input type="text" id="country" class="country" placeholder="Countrie" required>
+            <input type="text" id="titles" class="titles" placeholder="Title">
+            <input type="file" id="picture" class="picture" placeholder="Please, only files .JPG, .JPEG y .PNG">
+            <button type="submit">Add Author</button>
+        </form>
+    </div>
+    <div class="container-list">
+        <h2 class="container-list-titlebooks">My SCI FI Collection</h2>
+        <div id="booksList"></div>
+        <h2 class="container-list-titleauthors">My inlove authors</h2>
+        <div id="authorsList"></div>      
+    </div>
+    <footer>
+        <div class="footer-copy">
+            <!-- <img id="copy" src="https://res.cloudinary.com/dmbeu9ipe/image/upload/v1701930289/atnd56curyzrlz1nrrtd.png" alt="copy-logo">  -->
+            <p>Luis Campos Pousa * Upgrade_Hub</p>
+        </div>
+        <!-- <img id="upgrade" src="https://res.cloudinary.com/dmbeu9ipe/image/upload/v1701930304/rxiscpaw8slxxivqjwq7.png" alt="upgrade-logo">  -->
+    </footer>
+    <script src="script.js" defer></script>
+</body>
 </html>

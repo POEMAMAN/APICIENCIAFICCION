@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(
     session({
-      secret: process.env.SESSION_SECRET || 'upgradehub_node',
+      secret: process.env.SESSION_SECRET ||'upgradehub_node',
       resave: false, // Solo guardará la sesión si hay cambios en ella.
       saveUninitialized: false, // Lo usaremos como false debido a que gestionamos nuestra sesión con Passport
       cookie: {
@@ -51,4 +51,4 @@ app.use((err, req, res, next) => {
 })
 
 
-// app.listen(PORT, () => console.log(`escuchando en el puerto: https://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`escuchando en el puerto: https://localhost:${PORT}`));
