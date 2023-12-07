@@ -1,11 +1,12 @@
+const {isAuthenticated} = require('../middleware/auth.middleware');
 const express = require("express");
 const {getBooks, postBooks,deleteBooks,putBook} = require("../controllers/book.controller");
 
 const booksRouter = express.Router();
 
 
-booksRouter.get("/",getBooks)
-booksRouter.post("/",postBooks)
-booksRouter.delete("/:id",deleteBooks)
-booksRouter.put("/:id",putBook)
+booksRouter.get("/",{isAuthenticated},getBooks)
+booksRouter.post("/",{isAuthenticated},postBooks)
+booksRouter.delete("/:id",{isAuthenticated},deleteBooks)
+booksRouter.put("/:id",{isAuthenticated},putBook)
 module.exports = booksRouter;
