@@ -47,4 +47,32 @@ const putBook = async (req, res) => {
   }
 };
 
-module.exports = { getBooks, postBooks, deleteBooks, putBook };
+const HTTPSTATUSCODE = require("../../../utils/httpStatusCode");
+const fs = require("fs");
+
+const imageToUri = require("image-to-uri");
+
+const createCoverBook = async (req, res, next) => {
+  try {
+    bookCover = req.file.path ? req.file.path : null; 
+    const newBook = new Book();
+    newBook.title = req.body.title;
+    newBook.publication_year = req.body.publication_year;
+    newBook.collection = req.body.collection;
+    newBook.collection_index = req.body.collection_index;
+    newBook.universe = req.body. universe;
+    newBook.author = req.body.author;
+    newBook.cover = imageToUri(bookCover); //Y lo seteamos en cover.
+    const bookDb = await newBook.save();
+    await fs.unlinkSync(musicCover);
+    return res.json({
+      status: 201,
+      message: HTTPSTATUSCODE[201],
+      data: { book: bookDb.name },
+    });
+  } catch (error) {
+    return next(error);
+  }
+};
+
+module.exports = { getBooks, postBooks, deleteBooks, putBook, createCoverBook };
