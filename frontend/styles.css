@@ -35,6 +35,10 @@ header{
     display: flex;
     justify-content: space-around;
 }
+.container-form-title, .container-list-titlebooks, .container-list-titleauthors{
+    display: flex;
+    justify-content: center;
+}
 
 
 form {
@@ -58,7 +62,7 @@ color: transparent;
 visibility: hidden;
 }
 .picture::before {
-    content: 'Select some files';
+    content: 'Upload images';
     color: black;
     display: inline-block;
     background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
@@ -149,13 +153,14 @@ button:active {
     width: 60%;
     text-align: center;
 }
+.I {
+    text-decoration: underline;
+    color: #fff;
+}
 /*Footer*/
 footer{
     width: 100vw;
     height: 10vh;
-    background-image: url(https://res.cloudinary.com/dqfaa272n/image/upload/v1701982817/byhr034qj53da1uagcv7.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
     color:black ;
     font-weight: bold;
     display: flex;
@@ -184,7 +189,30 @@ footer{
    
 }
 @media (min-width: 1199.98px)  {
+    button {
+        height: 90px;
+        font-size: 60px;
+    }
 
+}
+
+@media (min-width: 5000px)  {
+    button {
+        height: 200px;
+        font-size: 150px;
+    }
+    input, button {
+        display: block;
+        margin-bottom: 60px;
+        padding: 60px;
+        border-radius: 60px;
+    }
+    ::placeholder {
+        font-size: 4em;
+      }
+      .picture::before {
+        padding: 15px 18px;
+    }
 }
 
 

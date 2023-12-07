@@ -13,19 +13,19 @@
         <h1 class="container-form-title">¡Make a great library SYFI!</h1>
         <div class="container-form">
         <form id="bookForm" action="action" method="POST" enctype="multipart/form-data">
-            <input type="text" id="name" class="name" placeholder="Título" required>
+            <input type="text" id="name" class="name" placeholder="Title" required>
             <input type="number" id="publication" class="publication" placeholder="publication year">
-            <input type="number" id="pages" class="pages" placeholder="pages number">
+            <input type="text" id="universe" class="universe" placeholder="Universe">
             <input type="text" id="series" name="series" placeholder="collection">
             <input type="file" id="picture" class="picture" placeholder="Please, only files .JPG, .JPEG y .PNG">
-            <button type="submit">Add book</button>
+            <button type="submit" class="special">Add book</button>
         </form>
         <form id="authorForm" action="action" method="POST" enctype="multipart/form-data">
-            <input type="text" id="name" class="name" placeholder="Title" required>
-            <input type="text" id="country" class="country" placeholder="Countrie" required>
+            <input type="text" id="name" class="name" placeholder="Name" required>
+            <input type="text" id="country" class="country" placeholder="Country" required>
             <input type="text" id="titles" class="titles" placeholder="Title">
             <input type="file" id="picture" class="picture" placeholder="Please, only files .JPG, .JPEG y .PNG">
-            <button type="submit">Add Author</button>
+            <button type="submit" class="special">Add Author</button>
         </form>
     </div>
     <div class="container-list">
@@ -37,7 +37,7 @@
     <footer>
         <div class="footer-copy">
             <img id="copy" src="https://res.cloudinary.com/dmbeu9ipe/image/upload/v1701930289/atnd56curyzrlz1nrrtd.png" alt="copy-logo"> 
-            <p>Luis Campos Pousa * Upgrade_Hub</p>
+            <p class="I">Luis Campos Pousa * Upgrade_Hub</p>
         </div>
         <img id="upgrade" src="https://res.cloudinary.com/dmbeu9ipe/image/upload/v1701930304/rxiscpaw8slxxivqjwq7.png" alt="upgrade-logo"> 
     </footer>
