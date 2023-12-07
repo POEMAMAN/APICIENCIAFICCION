@@ -6,9 +6,10 @@ const booksRouter = express.Router();
 
 
 booksRouter.get("/",{isAuthenticated},getBooks)
-booksRouter.post("/",{isAuthenticated},postBooks)
+booksRouter.post("/",{isAuthenticated},createCoverBook)
+booksRouter.post("/",{isAuthenticated}, [fileMiddlewares.upload.single('picture'), fileMiddlewares.uploadToCloudinary], postBooks)
 booksRouter.delete("/:id",{isAuthenticated},deleteBooks)
 booksRouter.put("/:id",{isAuthenticated},putBook)
-booksRouter.create("/",{isAuthenticated},createCoverBook)
+
 
 module.exports = booksRouter;

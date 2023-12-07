@@ -3,6 +3,7 @@ const express = require('express');
 const passport = require('passport');
 const userRoutes = express.Router();
 const User = require('../models/User');
+const {isAuthenticated} = require('../middleware/auth.middleware');
 
 userRoutes.get('/', async (req, res, next) => {
 

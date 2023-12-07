@@ -8,13 +8,22 @@ const getBooks = async (req, res) => {
     return res.status(500).json(error);
   }
 };
-const postBooks = async (req, res) => {
+const postBooks = async (req, res, next) => {
   try {
-    const newBook = new Book(req.body);
+    const bookPicture = req.file ? req.file.filename : null;
+    const newBook = new Book({
+      title: req.body.title,
+      publication_year: req.body.publication_year,
+      collection: req.body.collection,
+      collection_index: req.body.collection_index,
+      universe: req.body. universe,
+      author: req.body.author,
+      picture: bookPicture
+    });
     const createdBook = await newBook.save();
     return res.status(201).json(createdBook);
   } catch (error) {
-    return res.status(500).json(error);
+      return next(error);
   }
 };
 const deleteBooks = async (req, res) => {
