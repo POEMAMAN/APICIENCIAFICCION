@@ -77,7 +77,7 @@ const images = [
 ]
 
 
-const image =                "./src/api/images/butler.jpeg";
+const image =   "./src/api/images/scifi4.png";
 async function run(x) {
     for (const image of images) { }
     const result = await cloudinary.uploader.upload(image);

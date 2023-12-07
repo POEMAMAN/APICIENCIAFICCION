@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-image: url(https://res.cloudinary.com/dmbeu9ipe/image/upload/v1701926213/ldqsj3ddec2qxmwht55z.jpg); */
+    background-image: url(https://res.cloudinary.com/dqfaa272n/image/upload/v1701982817/byhr034qj53da1uagcv7.jpg);
     background-size: cover;
 }
 /*Header*/
@@ -15,7 +15,7 @@ header{
     top: 0;
     display: flex;
     justify-content: center;
-    /* background-image: url(https://res.cloudinary.com/dmbeu9ipe/image/upload/v1701925611/vdnkk3a74brvlrdkjbjw.jpg); */
+    background-image: url(https://res.cloudinary.com/dqfaa272n/image/upload/v1701982817/byhr034qj53da1uagcv7.jpg);
     background-size:inherit;
 }
 #scifi {
@@ -153,7 +153,7 @@ button:active {
 footer{
     width: 100vw;
     height: 10vh;
-    /* background-image: url(https://res.cloudinary.com/dmbeu9ipe/image/upload/v1701925611/vdnkk3a74brvlrdkjbjw.jpg); */
+    background-image: url(https://res.cloudinary.com/dqfaa272n/image/upload/v1701982817/byhr034qj53da1uagcv7.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     color:black ;
