@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    color: purple;
+    text-decoration: double;
+    color: rgb(223, 224, 235);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -54,6 +55,7 @@ input, button {
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 10px;
+
 }
 .picture {
 color: transparent;
@@ -145,8 +147,8 @@ button:active {
     padding: 10px;
     margin: 10px;
     width: 200px;
-    /* background-image: url(https://res.cloudinary.com/dmbeu9ipe/image/upload/v1701928994/do9lsndfpbciam4bjnra.jpg); */
-    background-size: cover;
+    background-image: url(https://res.cloudinary.com/dqfaa272n/image/upload/v1701986800/iptq5jlkrncx1rjbiccx.jpg);
+    background-size:auto;
 }
 
 .book-image, .author-image {
@@ -206,12 +208,23 @@ footer{
         margin-bottom: 60px;
         padding: 60px;
         border-radius: 60px;
+        font-size: 2em;
     }
     ::placeholder {
-        font-size: 4em;
+        font-size: 2em;
       }
       .picture::before {
-        padding: 15px 18px;
+        padding: 40px 100px;
+        font-size: 2em;
+    }
+    .bookCard, .authorCard {
+        padding: 70px;
+        margin: 35px;
+        width: 600px;
+        background-image: url(https://res.cloudinary.com/dqfaa272n/image/upload/v1701986800/iptq5jlkrncx1rjbiccx.jpg);
+        background-size:cover;
+        font-size: 4em;
+        text-decoration:solid;
     }
 }
 

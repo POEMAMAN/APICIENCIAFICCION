@@ -14,11 +14,13 @@ async function fetchBooks() {
     console.log(books)
     books.forEach(book => {
         const bookCard = `<div class="bookCard">
-                                <h3>${book.name}</h3>
-                                <center><img src="${book.picture}" alt="Portada del libro ${book.name}" class="book-image"></center>
-                                <p>Año de publicacion: Año ${book.publication}</p>
-                                <p>Páginas: ${book.pages}</p>
-                                <p>Saga: ${book.series}h</p>
+                                <h3>${book.title}</h3>
+                                <center><img src="${book.picture}" alt="Book Cover ${book.title}" class="book-image"></center>
+                                <p>Publication Year: Year ${book.publication_year}</p>
+                                <p>Universe: ${book.universe}</p>
+                                <p>Collection: ${book.collection}</p>
+                                <p>Collection Index: ${book.collection_index}</p>
+                                <p>Author: "${book.author}"</p>
                             </div>`;
         booksList.innerHTML += bookCard;
     });

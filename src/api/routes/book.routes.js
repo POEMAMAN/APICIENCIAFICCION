@@ -7,7 +7,8 @@ const {uploadToCloudinary} = require('../middleware/file.middleware');
 const booksRouter = express.Router();
 
 
-booksRouter.get("/",[isAuthenticated],getBooks)
+
+booksRouter.get("/",getBooks)
 booksRouter.post("/",[isAuthenticated],postBooks)
 booksRouter.post("/",[isAuthenticated], [fileMiddlewares.upload.single('picture'), fileMiddlewares.uploadToCloudinary], postBooks)
 booksRouter.delete("/:id",[isAuthenticated],deleteBooks)
